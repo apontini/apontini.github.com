@@ -15,7 +15,14 @@
 @font-face {
 	font-family: 'lato';
 	src: url('fonts/Lato-Thin.ttf') format('truetype');
-	font-weight: thin;
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'lato';
+	src: url('fonts/Lato-Light.ttf') format('truetype');
+	font-weight: 300;
 	font-style: normal;
 }
 
@@ -23,10 +30,33 @@ html, body {
 	font-family: lato, arial;
 	font-size: 16px;
 	height: 100%;
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+header {
+	margin-top: 5rem;
+	font-weight: 300;
+	font-size: 5rem;
+}
+
+section {
+	margin-top: 0.5rem;
+}
+
+.subtitle {
+	font-weight: 300;
+	font-size: 2rem;
+}
+
+main {
+	margin-top: 1rem;
+	font-weight: normal;
 }
 
 .message {
 	margin-top: 5rem;
-	font-style: bold;
+	font-weight: thin;
 	font-size: 5rem;
 }
