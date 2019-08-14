@@ -18,7 +18,8 @@
 					</header>
 				</div>
 			</div>
-			<div class="row justify-content-center">
+			<div class="fake-nav"></div>
+			<div class="row sticky-top justify-content-center nav-row">
 				<div class="col-12 col-lg-6">
 					<nav class="navbar navbar-expand-lg navbar-light">
 						<span class="navbar-brand subtitle" href="#">Web Developer</span>
@@ -26,18 +27,18 @@
 					    	<span class="navbar-toggler-icon"></span>
 					  	</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-						    <ul class="navbar-nav">
-						    	<li class="nav-item active">
-						     		<a class="nav-link" href="https://github.com/apontini">Github</a>
-						    	</li>
-						    	<li class="nav-item active">
-						     		<a class="nav-link" href="https://www.linkedin.com/in/alberto-pontini/">Linkedin</a>
-						    	</li>
-						    	<li class="nav-item active">
-						     		<a class="nav-link" href="./files/curriculum_ap.pdf">Curriculum (italian)</a>
-						    	</li>
-						    </ul>
-					  	</div>
+					    <ul class="navbar-nav">
+					    	<li class="nav-item active">
+					     		<a class="nav-link" href="https://github.com/apontini">Github</a>
+					    	</li>
+					    	<li class="nav-item active">
+					     		<a class="nav-link" href="https://www.linkedin.com/in/alberto-pontini/">Linkedin</a>
+					    	</li>
+					    	<li class="nav-item active">
+					     		<a class="nav-link" href="./files/curriculum_ap.pdf">Curriculum (italian)</a>
+					    	</li>
+					    </ul>
+				  	</div>
 					</nav>
 				</div>
 			</div>
@@ -77,5 +78,21 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			var observer = new IntersectionObserver(function(entries) {
+				if(entries[0].intersectionRatio === 0)
+				{
+					document.querySelector(".nav-row").classList.add("nav-sticky");
+					$('.nav-row .subtitle').html('Alberto Pontini');
+				}
+				else if(entries[0].intersectionRatio === 1)
+				{
+					document.querySelector(".nav-row").classList.remove("nav-sticky");
+					$('.nav-row .subtitle').html('Web Developer');
+				}
+			}, { threshold: [0,1] });
+
+			observer.observe(document.querySelector(".fake-nav"));
+		</script>
 	</body>
 </html>

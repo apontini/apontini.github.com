@@ -74,9 +74,14 @@ main a {
 
 .navbar {
 	padding: 0;
+	margin-bottom: 10px;
 }
 
-.nav-link {
+.fake-nav {
+	height: 1px;
+}
+
+.navbar-collapse.collapse .nav-link, .navbar-collapse.show .nav-link, .navbar-collapse.collapsing .nav-link {
 	padding-left: 0 !important;
 	padding-bottom: 0 !important;
 	font-weight: 300;
@@ -89,6 +94,17 @@ main a {
 
 .nav-link:hover {
 	text-decoration: underline;
+}
+
+.nav-row {
+	transition-duration: 0.5s;
+	background-color: #f7f7f7;
+}
+
+.nav-sticky {
+	-webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
+	box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
 }
 
 .message {
