@@ -27,6 +27,8 @@
 }
 
 html, body {
+	text-align: justify;
+  text-justify: inter-word;
 	font-family: lato, arial;
 	font-size: 16px;
 	height: 100%;
