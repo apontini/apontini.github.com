@@ -2,7 +2,7 @@
 	font-family: 'lato';
 	src: url('fonts/Lato-Regular.ttf') format('truetype');
 	font-weight: normal;
-  font-style: normal;
+  	font-style: normal;
 }
 
 @font-face {
@@ -36,7 +36,7 @@ html, body {
 }
 
 header {
-	margin-top: 5rem;
+	margin-top: 2rem;
 	font-weight: 300;
 	font-size: 5rem;
 }
@@ -53,6 +53,26 @@ section {
 main {
 	margin-top: 1rem;
 	font-weight: normal;
+}
+
+main a {
+	text-decoration: underline;
+	color: black;
+}
+
+.navbar {
+	padding: 0;
+}
+
+.nav-link {
+	padding-left: 0 !important;
+	padding-bottom: 0 !important;
+	font-weight: 300;
+	font-size: 0.9rem;
+}
+
+.nav-link:hover {
+	text-decoration: underline;
 }
 
 .message {
