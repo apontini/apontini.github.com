@@ -4,12 +4,6 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Alberto Pontini</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-		<link rel="stylesheet" href="stylesheet.css">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145849650-1"></script>
 		<script>
@@ -19,7 +13,12 @@
 
 		  gtag('config', 'UA-145849650-1');
 		</script>
-
+		<title>Alberto Pontini</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="stylesheet.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 		{% seo %}
 	</head>
@@ -67,7 +66,7 @@
 							Let me tell you something about me: <br />
 						</section>
 						<section>
-							<span class="first-letter">I</span>'m a 24 years old italian Web Developer currently working for <a href="https://www.hbenchmark.it/">Hbenchmark</a>.<br />
+							<span class="first-letter">I</span>'m a <span id="age"></span> years old italian Web Developer currently working for <a href="https://www.hbenchmark.it/">Hbenchmark</a>.<br />
 							<span class="first-letter">M</span>y team is developing a data intelligence software whose goal is to help hospitality get better by 
 							analyzing data and giving insights on how a single structure and its territory are performing.<br />
 						</section>
@@ -93,33 +92,40 @@
 			</div>
 		</div>
 		<script type="text/javascript">
+			$("#age").text(age(new Date("1994-12-03")))
 			var first_time = true;
 			var observer = new IntersectionObserver(function(entries) {
 				if(entries[0].intersectionRatio === 0)
 				{
 					
-					document.querySelector(".nav-row").classList.add("nav-sticky");
-					document.querySelector(".subtitle").classList.add("slide-down");
+					$(".nav-row").addClass("nav-sticky");
+					$(".subtitle").addClass("slide-down");
 					setTimeout(function() {
 						$('.nav-row .subtitle').html('Alberto Pontini');
-						document.querySelector(".subtitle").classList.remove("slide-down");
-					}, 150)
+						$(".subtitle").removeClass("slide-down");
+					}, 200)
 					first_time = false;
 					
 				}
 				else if(entries[0].intersectionRatio === 1 && !first_time)
 				{
-					document.querySelector(".nav-row").classList.remove("nav-sticky");
-					document.querySelector(".subtitle").classList.add("slide-up");
+					$(".nav-row").removeClass("nav-sticky");
+					$(".subtitle").addClass("slide-up");
 					setTimeout(function() {
 						$('.nav-row .subtitle').html('Web Developer');
-						document.querySelector(".subtitle").classList.remove("slide-up");
-					}, 150)
+						$(".subtitle").removeClass("slide-up");
+					}, 200)
 					
 				}
 			}, { threshold: [0,1] });
 
 			observer.observe(document.querySelector(".fake-nav"));
+
+			function age(birthday) {
+		   var time_passed = Date.now() - birthday.getTime();
+		   var ms_epoch = new Date(time_passed);
+		   return Math.abs(ms_epoch.getUTCFullYear() - 1970);
+		 }
 		</script>
 	</body>
 </html>

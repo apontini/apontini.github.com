@@ -59,7 +59,7 @@ section {
 
 .subtitle {
 	font-weight: 300;
-	transition-duration: 0.5s;
+	transition-duration: 0.2s;
 	font-size: 1.8rem;
 }
 
@@ -75,6 +75,9 @@ main a {
 
 .navbar {
 	padding: 0;
+}
+
+.navbar-collapse {
 	margin-bottom: 10px;
 }
 
@@ -94,7 +97,6 @@ main a {
 }
 
 .nav-row {
-	transition-duration: 0.15s;
 	background-color: #f7f7f7;
 }
 
@@ -116,10 +118,10 @@ main a {
 
 .slide-down {
 	opacity: 0;
-	transform: translate(0%, 100%);
+	transform: translate(0%, 25%);
 }
 
 .slide-up {
 	opacity: 0;
-	transform: translate(0%, -100%);
+	transform: translate(0%, -25%);
 }
