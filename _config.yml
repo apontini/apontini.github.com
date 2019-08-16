@@ -1,2 +1,12 @@
+title: Alberto Pontini
+description: Web Developer
+author: apontini
+lang: en_BG
+social:
+  name: Alberto Pontini
+  links:
+    - https://twitter.com/AlbertoPontini
+    - https://www.linkedin.com/in/alberto-pontini/
+    - https://github.com/apontini
 plugins:
   - jekyll-seo-tag
