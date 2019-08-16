@@ -50,7 +50,7 @@ section {
 }
 
 .container-fluid {
-	padding-bottom: 5rem;
+	padding-bottom: 3rem;
 }
 
 .first-letter {
@@ -59,6 +59,7 @@ section {
 
 .subtitle {
 	font-weight: 300;
+	transition-duration: 0.5s;
 	font-size: 1.8rem;
 }
 
@@ -77,10 +78,6 @@ main a {
 	margin-bottom: 10px;
 }
 
-.fake-nav {
-	height: 1px;
-}
-
 .navbar-collapse.collapse .nav-link, .navbar-collapse.show .nav-link, .navbar-collapse.collapsing .nav-link {
 	padding-left: 0 !important;
 	padding-bottom: 0 !important;
@@ -97,18 +94,32 @@ main a {
 }
 
 .nav-row {
-	transition-duration: 0.5s;
+	transition-duration: 0.15s;
 	background-color: #f7f7f7;
 }
 
+.fake-nav {
+	height: 1px;
+}
+
 .nav-sticky {
-	-webkit-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
-	-moz-box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
-	box-shadow: 0px 1px 10px 0px rgba(0,0,0,0.25);
+	-webkit-box-shadow: 0px 7px 7px -6px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 7px 7px -6px rgba(0,0,0,0.25);
+	box-shadow: 0px 7px 7px -6px rgba(0,0,0,0.25);
 }
 
 .message {
 	margin-top: 5rem;
 	font-weight: thin;
 	font-size: 5rem;
+}
+
+.slide-down {
+	opacity: 0;
+	transform: translate(0%, 100%);
+}
+
+.slide-up {
+	opacity: 0;
+	transform: translate(0%, -100%);
 }
