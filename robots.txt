@@ -1,0 +1,4 @@
+# nosey little one aren't you? ;)
+User-Agent: *
+Disallow: /fonts/
+Disallow: /files/
