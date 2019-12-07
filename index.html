@@ -71,17 +71,18 @@
 						</section>
 						<section>
 							<span class="first-letter">O</span>n the 25th of February, 2019 I graduated after attending a Master Degree course in Computer Science Engineering @ University of Padua.<br />
-							<span class="first-letter">M</span>y thesis aimed at creating an Android application (both the <a href="https://github.com/apontini/Mnemosyne">application</a> 
+							<span class="first-letter">M</span>y thesis aimed at creating an Android application (both the <a href="https://github.com/apontini/Mnemosyne">application</a>
 							and all the <a href="https://github.com/apontini/Mnemosyne_server">backend</a> structure) to aid users' prospectic memory,
-							a particular type of memory which allows people to remember things that needs to happen in the future like buying 
+							a particular type of memory which allows people to remember things that needs to happen in the future like buying
 							milk before getting back at home.<br />
 							<span class="first-letter">T</span>his application uses NLP to retrieve the user's requests, allowing him/her to define a task using
 							only natural language. The backend then figures automatically where and when to complete the task.
 						</section>
 						<section>
 							<span class="first-letter">I</span>'ve published <a href="https://rubygems.org/profiles/apontini">some Ruby gems</a>. One in particular,
-							<a href="https://github.com/apontini/mina-proteus">mina-proteus</a>, has been accepted on <a href="https://github.com/davydovanton/awesome-hanami"> awesome hanami</a>, a list of 
-							the most useful gems for the <a href="https://hanamirb.org/">Ruby Hanami framework</a>.
+							<a href="https://github.com/apontini/mina-proteus">mina-proteus</a>, has been accepted on <a href="https://github.com/davydovanton/awesome-hanami"> awesome hanami</a>, a list of
+							the most useful gems for the <a href="https://hanamirb.org/">Ruby Hanami framework</a>.<br />
+							<span class="first-letter">M</span>oreover, I'm actively participating to <a href="https://www.protondb.com/">ProtonDB</a> crowdsourced translation.
 						</section>
 						<section>
 							<span class="first-letter">I</span>f you need to contact me, please write me a mail at <a href="mailto:alberto.pontini@gmail.com">my personal inbox</a> or at <a href="mailto:alberto.pontini@zextras.com">my work inbox</a> (which i'll be checking less often than my personal one)
@@ -96,7 +97,7 @@
 			var observer = new IntersectionObserver(function(entries) {
 				if(entries[0].intersectionRatio === 0)
 				{
-					
+
 					$(".nav-row").addClass("nav-sticky");
 					$(".subtitle").addClass("slide-down");
 					setTimeout(function() {
@@ -104,7 +105,7 @@
 						$(".subtitle").removeClass("slide-down");
 					}, 200)
 					first_time = false;
-					
+
 				}
 				else if(entries[0].intersectionRatio === 1 && !first_time)
 				{
@@ -114,7 +115,7 @@
 						$('.nav-row .subtitle').html('Web Developer');
 						$(".subtitle").removeClass("slide-up");
 					}, 200)
-					
+
 				}
 			}, { threshold: [0,1] });
 
