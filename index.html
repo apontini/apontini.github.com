@@ -35,7 +35,7 @@
 			<div class="row sticky-top justify-content-center nav-row">
 				<div class="col-12 col-lg-6">
 					<nav class="navbar  navbar-light">
-						<span class="navbar-brand subtitle" href="#">Web Developer</span>
+						<span class="navbar-brand subtitle" id="occupation" href="#">Web Developer</span>
 						<button class="navbar-toggler ml-auto float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
 					    	<span class="navbar-toggler-icon"></span>
 					  	</button>
@@ -69,8 +69,8 @@
 							Let me tell you something about me then: <br />
 						</section>
 						<section>
-							<span class="first-letter">I</span>'m a <span id="age"></span> years old italian Software Developer currently working as a Java backend developer for <a href="https://www.zextras.com/">Zextras</a>.<br />
-							<span class="first-letter">H</span>ere I'm developing a Cloud Storage and a Chat/Videochat web application which serves users in many organizations using Zimbra.<br />
+							<span class="first-letter">I</span>'m a <span id="age"></span> years old italian Web Developer currently working as a Java backend developer for <a href="https://www.zextras.com/">Zextras</a>.<br />
+							<span class="first-letter">H</span>ere I'm developing a Cloud Storage and a Chat and Videochat web application using WebRTC which serves users in many organizations using Zimbra.<br />
 							<span class="first-letter">I</span>'ve also worked at <a href="https://www.hbenchmark.it/it/">H-Benchmark</a> were I developed a data intelligence software whose goal is to help hospitality get better by analyzing data and giving insights on how a single structure and its territory are performing.<br />
 						</section>
 						<section>
@@ -96,40 +96,41 @@
 			</div>
 		</div>
 		<script type="text/javascript">
-			$("#age").text(age(new Date("1994-12-03")))
+			var occupation = "Web Developer";
 			var first_time = true;
-			var observer = new IntersectionObserver(function(entries) {
-				if(entries[0].intersectionRatio === 0)
-				{
+
+			$("#age").text(age(new Date("1994-12-03")))
+			$("#occupation").text(occupation)
+			var observer = new IntersectionObserver(function (entries) {
+				if (entries[0].intersectionRatio === 0) {
 
 					$(".nav-row").addClass("nav-sticky");
 					$(".subtitle").addClass("slide-down");
-					setTimeout(function() {
+					setTimeout(function () {
 						$('.nav-row .subtitle').html('Alberto Pontini');
 						$(".subtitle").removeClass("slide-down");
 					}, 200)
 					first_time = false;
 
 				}
-				else if(entries[0].intersectionRatio === 1 && !first_time)
-				{
+				else if (entries[0].intersectionRatio === 1 && !first_time) {
 					$(".nav-row").removeClass("nav-sticky");
 					$(".subtitle").addClass("slide-up");
-					setTimeout(function() {
-						$('.nav-row .subtitle').html('Software Developer');
+					setTimeout(function () {
+						$('.nav-row .subtitle').html(occupation);
 						$(".subtitle").removeClass("slide-up");
 					}, 200)
 
 				}
-			}, { threshold: [0,1] });
+			}, { threshold: [0, 1] });
 
 			observer.observe(document.querySelector(".fake-nav"));
 
 			function age(birthday) {
-		   var time_passed = Date.now() - birthday.getTime();
-		   var ms_epoch = new Date(time_passed);
-		   return Math.abs(ms_epoch.getUTCFullYear() - 1970);
-		 }
+				var time_passed = Date.now() - birthday.getTime();
+				var ms_epoch = new Date(time_passed);
+				return Math.abs(ms_epoch.getUTCFullYear() - 1970);
+			}
 		</script>
 	</body>
 </html>
