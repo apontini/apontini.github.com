@@ -73,6 +73,10 @@ main a {
 	color: black;
 }
 
+.navbar-toggler {
+	border: none;
+}
+
 .navbar {
 	padding: 0;
 }
