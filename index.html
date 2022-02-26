@@ -3,23 +3,30 @@
 ---
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145849650-1"></script>
 		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
+			window.dataLayer = window.dataLayer || [];
+			function gtag() { dataLayer.push(arguments); }
+			gtag('js', new Date());
 
-		  gtag('config', 'UA-145849650-1');
+			gtag('config', 'UA-145849650-1');
 		</script>
 		<title>Alberto Pontini</title>
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="stylesheet.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script defer src="./js/brands.min.js"></script>
+		<script defer src="./js/fontawesome.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
 		{% seo %}
 	</head>
 	<body>
@@ -36,25 +43,24 @@
 				<div class="col-12 col-lg-6">
 					<nav class="navbar  navbar-light">
 						<span class="navbar-brand subtitle" id="occupation" href="#">Software Engineer</span>
-						<button class="navbar-toggler ml-auto float-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-					    	<span class="navbar-toggler-icon"></span>
-					  	</button>
+						<button class="navbar-toggler ml-auto float-right" type="button" data-toggle="collapse"
+							data-target="#navbarSupportedContent">
+							<span class="navbar-toggler-icon"></span>
+						</button>
 						<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					    <ul class="navbar-nav">
-					    	<li class="nav-item active">
-					     		<a class="nav-link" href="https://github.com/apontini">Github</a>
-					    	</li>
-					    	<li class="nav-item active">
-					     		<a class="nav-link" href="https://www.linkedin.com/in/alberto-pontini/">Linkedin</a>
-					    	</li>
-					    	<li class="nav-item active">
-					     		<a class="nav-link" href="https://apontini.s3-eu-west-1.amazonaws.com/curriculum_ap.pdf">Curriculum (Italian)</a>
-					    	</li>
-					    	<li class="nav-item active">
-					     		<a class="nav-link" href="https://apontini.s3-eu-west-1.amazonaws.com/curriculum_ap_eng.pdf">Curriculum (English)</a>
-					    	</li>
-					    </ul>
-				  	</div>
+							<ul class="navbar-nav">
+								<li class="nav-item active">
+									<a class="nav-link"
+										href="https://apontini.s3-eu-west-1.amazonaws.com/curriculum_ap.pdf">Curriculum
+										(Italian)</a>
+								</li>
+								<li class="nav-item active">
+									<a class="nav-link"
+										href="https://apontini.s3-eu-west-1.amazonaws.com/curriculum_ap_eng.pdf">Curriculum
+										(English)</a>
+								</li>
+							</ul>
+						</div>
 					</nav>
 				</div>
 			</div>
@@ -65,33 +71,68 @@
 							<span class="first-letter">H</span>ello.<br />
 						</section>
 						<section>
-							<span class="first-letter">M</span>y name is Alberto, I'm a <span id="age"></span> years old italian software engineer currently working as a Java backend engineer for <a href="https://www.zextras.com/">Zextras</a>.
-							Here I'm developing a Cloud Storage and a WebRTC Videochat, both serving users in many organizations using Zimbra.<br />
-							<span class="first-letter">I</span>'ve also worked at <a href="https://www.hbenchmark.it/it/">H-Benchmark</a> were I developed a data intelligence web application whose goal is to help hospitality get better 
-							by analyzing data and giving insights on how a single structure and its territory are performing.<br />
+							<span class="first-letter">M</span>y name is Alberto, I'm a <span id="age"></span> years old
+							italian software engineer currently working as a Java backend engineer for <a
+								href="https://www.zextras.com/">Zextras</a>.
+							Here I developed a cloud storage solution and a WebRTC videochat, both serving users in many
+							organizations using Zimbra and now I'm focused on the WebRTC videochat portion for our new
+							product, <a href="https://www.zextras.com/carbonio/">Carbonio</a>.<br />
+							<span class="first-letter">I</span>'ve also worked at <a
+								href="https://www.hbenchmark.it/">H-Benchmark</a> were I developed a data intelligence
+							web application whose goal is to help hospitality get better
+							by analyzing data and giving insights on how a single structure and its territory are
+							performing.<br />
 						</section>
 						<section>
-							<span class="first-letter">O</span>n the 25th of February, 2019 I graduated after attending a Master's Degree course in Computer Science Engineering at the University of Padua.<br />
-							<span class="first-letter">M</span>y thesis aimed at creating an Android application (both the <a href="https://github.com/apontini/Mnemosyne">application</a>
-							and all the <a href="https://github.com/apontini/Mnemosyne_server">backend</a> structure) to aid users' prospectic memory,
-							a particular type of memory which allows people to remember things that needs to happen in the future like buying
+							<span class="first-letter">O</span>n the 25th of February, 2019 I graduated after attending a
+							Master's Degree course in Computer Science Engineering at the University of Padua.<br />
+							<span class="first-letter">M</span>y thesis aimed at creating an Android application (both the
+							<a href="https://github.com/apontini/Mnemosyne">application</a>
+							and all the <a href="https://github.com/apontini/Mnemosyne_server">backend</a> structure) to aid
+							users' prospectic memory,
+							a particular type of memory which allows people to remember things that needs to happen in the
+							future like buying
 							milk before getting back home.<br />
-							<span class="first-letter">T</span>his application uses Natural Language Processing to retrieve the user's requests, allowing him/her to define a task using
-							only natural language. The backend then automatically figures where and when to complete the task.
+							<span class="first-letter">T</span>his application uses Natural Language Processing to retrieve
+							the user's requests, allowing him/her to define a task using
+							only natural language. The backend then automatically figures where and when to complete the
+							task.
 						</section>
 						<section>
-							<span class="first-letter">I</span>'ve published <a href="https://rubygems.org/profiles/apontini">some Ruby gems</a>. One in particular,
-							<a href="https://github.com/apontini/mina-proteus">mina-proteus</a>, has been accepted on <a href="https://github.com/davydovanton/awesome-hanami"> awesome hanami</a>, a list of
+							<span class="first-letter">I</span>'ve published <a
+								href="https://rubygems.org/profiles/apontini">some Ruby gems</a>. One in particular,
+							<a href="https://github.com/apontini/mina-proteus">mina-proteus</a>, has been accepted on <a
+								href="https://github.com/davydovanton/awesome-hanami"> awesome hanami</a>, a list of
 							the most useful gems for the <a href="https://hanamirb.org/">Ruby Hanami framework</a>.<br />
-							<span class="first-letter">M</span>oreover, I took part in the <a href="https://www.protondb.com/">ProtonDB</a> crowdsourced translation.
-						</section>
-						<section>
-							<span class="first-letter">I</span>f you need to contact me, you may reach me at <a href="mailto:alberto.pontini@gmail.com">my personal inbox</a>.
+							<span class="first-letter">I</span>'m contributing to <a
+								href="https://github.com/PackageFoundation/yap">yap</a>, a
+							forked tool that
+							allows you to build packages for many GNU/Linux distributions with a single package
+							definition.<br />
+							<span class="first-letter">M</span>oreover, I also took part in the <a
+								href="https://www.protondb.com/">ProtonDB</a> crowdsourced translation.
 						</section>
 					</main>
 				</div>
 			</div>
 		</div>
+		<footer>
+			<div class="container-fluid">
+				<div class="row justify-content-center">
+					<div class="col col-lg-3">
+						<div class="footer-left">
+							<a href="mailto:alberto.pontini@gmail.com">Contact me</a>
+						</div>
+					</div>
+					<div class="col col-lg-3">
+						<div class="footer-right">
+							<a href="https://www.linkedin.com/in/alberto-pontini/"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+							<a href="https://github.com/apontini"><i class="fa-brands fa-github fa-lg"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
 		<script type="text/javascript">
 			var occupation = "Software Engineer";
 			var first_time = true;
@@ -130,4 +171,5 @@
 			}
 		</script>
 	</body>
+
 </html>
