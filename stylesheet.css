@@ -131,6 +131,15 @@ main a {
 	transform: translate(0%, -25%);
 }
 
+.book-list {
+	padding-top: 1rem;
+	list-style: square;
+}
+
+.book-list .book-list-element {
+	margin-bottom: 0.3rem;
+}
+
 footer {
 	padding-top: 1rem;
 	width: 100%;
