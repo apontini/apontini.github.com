@@ -169,13 +169,13 @@ section {
 	margin-top: 0;
 }
 
-.book-list {
+.item-list {
 	padding-top: 1rem;
 	padding-left: 1.25rem;
 	list-style: disc;
 }
 
-.book-list .book-list-element {
+.item-list .item-list-element {
 	margin-bottom: 0.35rem;
 }
 
